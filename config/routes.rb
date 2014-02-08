@@ -1,6 +1,10 @@
 MyStaticPages::Application.routes.draw do
-  get "pages/welcome"
-  get "pages/about"
+  # get "pages/welcome"
+  # get "pages/about"
+
+  match "welcome", to: "pages#welcome", via: 'get'
+  match "about",   to: "pages#about",   via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
